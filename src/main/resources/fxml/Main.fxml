@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<GridPane prefHeight="527.0" prefWidth="859.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hlfnetworkapplication.javafx.MainController">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <children>
+        <VBox>
+            <children>
+                <StackPane>
+                    <children>
+                        <MenuBar prefHeight="0.0" prefWidth="592.0">
+                            <menus>
+                                <Menu mnemonicParsing="false" text="File">
+                                    <items>
+                                        <MenuItem mnemonicParsing="false" onAction="#enroll" text="Enroll user" />
+                                        <MenuItem mnemonicParsing="false" onAction="#exit" text="Exit" />
+                                    </items>
+                                </Menu>
+                            </menus>
+                        </MenuBar>
+                        <Label fx:id="userLabel" />
+                    </children>
+                </StackPane>
+                <SplitPane dividerPositions="0.6522911051212938" orientation="VERTICAL" prefHeight="505.0" prefWidth="859.0">
+                    <items>
+                        <TabPane prefHeight="238.0" prefWidth="600.0">
+                            <tabs>
+                                <Tab closable="false" text="Register Record">
+                                    <content>
+                                        <SplitPane dividerPositions="0.5" prefHeight="206.0" prefWidth="594.0">
+                                            <items>
+                                                <SplitPane dividerPositions="0.5816326530612245" orientation="VERTICAL" prefHeight="204.0" prefWidth="167.0">
+                                                    <items>
+                                                        <VBox prefHeight="99.0" prefWidth="426.0">
+                                                            <children>
+                                                                <VBox prefHeight="7.0" prefWidth="210.0" />
+                                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Register New Record" wrappingWidth="209.7294921875">
+                                                                    <font>
+                                                                        <Font size="16.0" />
+                                                                    </font>
+                                                   <VBox.margin>
+                                                      <Insets left="20.0" />
+                                                   </VBox.margin>
+                                                                </Text>
+                                                            </children>
+                                                        </VBox>
+                                                        <VBox prefHeight="200.0" prefWidth="100.0">
+                                                            <children>
+                                                                <TextField fx:id="tab1Arg1">
+                                                                    <font>
+                                                                        <Font size="14.0" />
+                                                                    </font>
+                                                                </TextField>
+                                                                <TextField fx:id="tab1Arg2">
+                                                                    <font>
+                                                                        <Font size="14.0" />
+                                                                    </font>
+                                                   <VBox.margin>
+                                                      <Insets />
+                                                   </VBox.margin>
+                                                                </TextField>
+                                                                <TextField fx:id="tab1Arg3">
+                                                                    <font>
+                                                                        <Font size="14.0" />
+                                                                    </font>
+                                                   <VBox.margin>
+                                                      <Insets />
+                                                   </VBox.margin>
+                                                                </TextField>
+                                                                <Button fx:id="registerBtn" disable="true" mnemonicParsing="false" onAction="#register" prefHeight="26.0" prefWidth="426.0" text="Register Record">
+                                                                    <font>
+                                                                        <Font size="14.0" />
+                                                                    </font>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                                </Button>
+                                                            </children>
+                                                        </VBox>
+                                                    </items>
+                                                </SplitPane>
+                                                <VBox prefHeight="204.0" prefWidth="303.0">
+                                                    <children>
+                                                        <HBox fx:id="tab1Progress" prefHeight="57.0" prefWidth="292.0">
+                                                            <children>
+                                                                <HBox prefHeight="27.0" prefWidth="412.0">
+                                                                    <children>
+                                                                        <Label text="Processing request...">
+                                                                            <font>
+                                                                                <Font size="16.0" />
+                                                                            </font>
+                                                         <HBox.margin>
+                                                            <Insets left="20.0" />
+                                                         </HBox.margin>
+                                                                        </Label>
+                                                                    </children>
+                                                                </HBox>
+                                                                <ProgressIndicator fx:id="registerProgressIndicator" />
+                                                            </children>
+                                                        </HBox>
+                                                        <TextArea fx:id="tab1Area" editable="false" prefHeight="384.0" prefWidth="425.0" />
+                                                    </children>
+                                                </VBox>
+                                            </items>
+                                        </SplitPane>
+                                    </content>
+                                </Tab>
+                                <Tab closable="false" text="Access Control">
+                                    <content>
+                                        <SplitPane dividerPositions="0.5" prefHeight="206.0" prefWidth="594.0">
+                                            <items>
+                                                <SplitPane dividerPositions="0.4897959183673469" orientation="VERTICAL" prefHeight="204.0" prefWidth="167.0">
+                                                    <items>
+                                                        <VBox prefHeight="22.0" prefWidth="210.0">
+                                                            <children>
+                                                                <VBox prefHeight="7.0" prefWidth="210.0" />
+                                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Edit Access Control List" wrappingWidth="209.7294921875">
+                                                                    <font>
+                                                                        <Font size="16.0" />
+                                                                    </font>
+                                                   <VBox.margin>
+                                                      <Insets left="20.0" />
+                                                   </VBox.margin>
+                                                                </Text>
+                                                            </children>
+                                                        </VBox>
+                                                        <VBox prefHeight="200.0" prefWidth="100.0">
+                                                            <children>
+                                                                <TextField fx:id="tab2Arg1">
+                                                                    <font>
+                                                                        <Font size="14.0" />
+                                                                    </font>
+                                                                </TextField>
+                                                                <TextField fx:id="tab2Arg2">
+                                                                    <font>
+                                                                        <Font size="14.0" />
+                                                                    </font>
+                                                                </TextField>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label text="Entity">
+                                                         <HBox.margin>
+                                                            <Insets left="30.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label text="Grant/Revoke">
+                                                         <HBox.margin>
+                                                            <Insets left="90.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label text="Type">
+                                                         <HBox.margin>
+                                                            <Insets left="50.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </HBox>
+                                                <HBox prefHeight="42.0" prefWidth="426.0">
+                                                   <children>
+                                                      <VBox>
+                                                         <children>
+                                                            <RadioButton fx:id="clientRadBtn" mnemonicParsing="false" text="Client">
+                                                               <VBox.margin>
+                                                                  <Insets left="20.0" />
+                                                               </VBox.margin>
+                                                            </RadioButton>
+                                                            <RadioButton fx:id="mspRadBtn" mnemonicParsing="false" text="MSP (Provider)">
+                                                               <VBox.margin>
+                                                                  <Insets left="20.0" />
+                                                               </VBox.margin>
+                                                            </RadioButton>
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox>
+                                                         <children>
+                                                                              <RadioButton fx:id="grantRadBtn" mnemonicParsing="false" text="Grant permission">
+                                                               <VBox.margin>
+                                                                  <Insets left="20.0" />
+                                                               </VBox.margin>
+                                                            </RadioButton>
+                                                                              <RadioButton fx:id="revokeRadBtn" mnemonicParsing="false" text="Revoke permission">
+                                                               <VBox.margin>
+                                                                  <Insets left="20.0" />
+                                                               </VBox.margin>
+                                                            </RadioButton>
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox>
+                                                         <children>
+                                                            <RadioButton fx:id="readRadBtn" mnemonicParsing="false" text="READ">
+                                                               <VBox.margin>
+                                                                  <Insets left="20.0" />
+                                                               </VBox.margin>
+                                                            </RadioButton>
+                                                            <RadioButton fx:id="writeRadBtn" mnemonicParsing="false" text="WRITE">
+                                                               <VBox.margin>
+                                                                  <Insets left="20.0" />
+                                                               </VBox.margin>
+                                                            </RadioButton>
+                                                         </children>
+                                                      </VBox>
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets bottom="15.0" />
+                                                   </VBox.margin>
+                                                </HBox>
+                                                                <Button fx:id="editBtn" disable="true" mnemonicParsing="false" onAction="#edit" prefHeight="26.0" prefWidth="426.0" text="Edit">
+                                                                    <font>
+                                                                        <Font size="14.0" />
+                                                                    </font>
+                                                                </Button>
+                                                            </children>
+                                                        </VBox>
+                                                    </items>
+                                                </SplitPane>
+                                                <VBox prefHeight="204.0" prefWidth="303.0">
+                                                    <children>
+                                                        <HBox fx:id="tab2Progress" prefHeight="57.0" prefWidth="292.0">
+                                                            <children>
+                                                                <HBox prefHeight="27.0" prefWidth="412.0">
+                                                                    <children>
+                                                                        <Label text="Processing request...">
+                                                                            <font>
+                                                                                <Font size="16.0" />
+                                                                            </font>
+                                                         <HBox.margin>
+                                                            <Insets left="20.0" />
+                                                         </HBox.margin>
+                                                                        </Label>
+                                                                    </children>
+                                                                </HBox>
+                                                                <ProgressIndicator fx:id="registerProgressIndicator1" />
+                                                            </children>
+                                                        </HBox>
+                                                        <TextArea fx:id="tab2Area" editable="false" prefHeight="384.0" prefWidth="425.0" />
+                                                    </children>
+                                                </VBox>
+                                            </items>
+                                        </SplitPane>
+                                    </content>
+                                </Tab>
+                                <Tab closable="false" text="Read">
+                                    <content>
+                                        <SplitPane dividerPositions="0.5" prefHeight="206.0" prefWidth="594.0">
+                                            <items>
+                                                <SplitPane dividerPositions="0.5816326530612245" orientation="VERTICAL" prefHeight="204.0" prefWidth="167.0">
+                                                    <items>
+                                                        <VBox prefHeight="22.0" prefWidth="210.0">
+                                                            <children>
+                                                                <VBox prefHeight="7.0" prefWidth="210.0" />
+                                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Read Record" wrappingWidth="209.7294921875">
+                                                                    <font>
+                                                                        <Font size="16.0" />
+                                                                    </font>
+                                                   <VBox.margin>
+                                                      <Insets left="20.0" />
+                                                   </VBox.margin>
+                                                                </Text>
+                                                            </children>
+                                                        </VBox>
+                                                        <VBox prefHeight="200.0" prefWidth="100.0">
+                                                            <children>
+                                                                <TextField fx:id="tab3Arg1">
+                                                                    <font>
+                                                                        <Font size="14.0" />
+                                                                    </font>
+                                                   <VBox.margin>
+                                                      <Insets />
+                                                   </VBox.margin>
+                                                                </TextField>
+                                                                <TextField fx:id="tab3Arg2">
+                                                                    <font>
+                                                                        <Font size="14.0" />
+                                                                    </font>
+                                                   <VBox.margin>
+                                                      <Insets />
+                                                   </VBox.margin>
+                                                                </TextField>
+                                                <HBox prefHeight="52.0" prefWidth="426.0">
+                                                   <children>
+                                                      <CheckBox fx:id="overrideBox" mnemonicParsing="false" text="Override (emergency)">
+                                                         <padding>
+                                                            <Insets left="140.0" />
+                                                         </padding>
+                                                      </CheckBox>
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </HBox>
+                                                                <Button fx:id="readBtn" disable="true" mnemonicParsing="false" onAction="#read" prefHeight="26.0" prefWidth="426.0" text="Read Record">
+                                                                    <font>
+                                                                        <Font size="14.0" />
+                                                                    </font>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                                </Button>
+                                                            </children>
+                                                        </VBox>
+                                                    </items>
+                                                </SplitPane>
+                                                <VBox prefHeight="204.0" prefWidth="303.0">
+                                                    <children>
+                                                        <HBox fx:id="tab3Progress" prefHeight="57.0" prefWidth="292.0">
+                                                            <children>
+                                                                <HBox prefHeight="25.0" prefWidth="412.0">
+                                                                    <children>
+                                                                        <Label text="Processing request...">
+                                                                            <font>
+                                                                                <Font size="16.0" />
+                                                                            </font>
+                                                         <HBox.margin>
+                                                            <Insets left="20.0" />
+                                                         </HBox.margin>
+                                                                        </Label>
+                                                                    </children>
+                                                                </HBox>
+                                                                <ProgressIndicator fx:id="eventProgressHbox" />
+                                                            </children>
+                                                        </HBox>
+                                                        <TextArea fx:id="tab3Area" editable="false" prefHeight="707.0" prefWidth="425.0" />
+                                                    </children>
+                                                </VBox>
+                                            </items>
+                                        </SplitPane>
+                                    </content>
+                                </Tab>
+                                <Tab closable="false" text="Write">
+                                    <content>
+                                        <SplitPane dividerPositions="0.5" prefHeight="206.0" prefWidth="594.0">
+                                            <items>
+                                                <SplitPane dividerPositions="0.5816326530612245" orientation="VERTICAL" prefHeight="204.0" prefWidth="167.0">
+                                                    <items>
+                                                        <VBox prefHeight="22.0" prefWidth="210.0">
+                                                            <children>
+                                                                <VBox prefHeight="7.0" prefWidth="210.0" />
+                                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Write to Record" wrappingWidth="209.7294921875">
+                                                                    <font>
+                                                                        <Font size="16.0" />
+                                                                    </font>
+                                                   <VBox.margin>
+                                                      <Insets left="20.0" />
+                                                   </VBox.margin>
+                                                                </Text>
+                                                            </children>
+                                                        </VBox>
+                                                        <VBox prefHeight="200.0" prefWidth="100.0">
+                                                            <children>
+                                                                <TextField fx:id="tab4Arg1" prefHeight="0.0" prefWidth="426.0">
+                                                                    <font>
+                                                                        <Font size="14.0" />
+                                                                    </font>
+                                                                </TextField>
+                                                                <TextField fx:id="tab4Arg2">
+                                                                    <font>
+                                                                        <Font size="14.0" />
+                                                                    </font>
+                                                   <VBox.margin>
+                                                      <Insets />
+                                                   </VBox.margin>
+                                                                </TextField>
+                                                <HBox prefHeight="52.0" prefWidth="426.0">
+                                                   <VBox.margin>
+                                                      <Insets />
+                                                   </VBox.margin>
+                                                </HBox>
+                                                                <Button fx:id="writeBtn" disable="true" mnemonicParsing="false" onAction="#write" prefHeight="26.0" prefWidth="430.0" text="Write to Record">
+                                                                    <font>
+                                                                        <Font size="14.0" />
+                                                                    </font>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                                </Button>
+                                                            </children>
+                                                        </VBox>
+                                                    </items>
+                                                </SplitPane>
+                                                <VBox prefHeight="204.0" prefWidth="303.0">
+                                                    <children>
+                                                        <HBox fx:id="tab4Progress" prefHeight="57.0" prefWidth="292.0">
+                                                            <children>
+                                                                <HBox prefHeight="25.0" prefWidth="412.0">
+                                                                    <children>
+                                                                        <Label text="Processing request...">
+                                                                            <font>
+                                                                                <Font size="16.0" />
+                                                                            </font>
+                                                         <HBox.margin>
+                                                            <Insets left="20.0" />
+                                                         </HBox.margin>
+                                                                        </Label>
+                                                                    </children>
+                                                                </HBox>
+                                                                <ProgressIndicator fx:id="eventProgressHbox1" />
+                                                            </children>
+                                                        </HBox>
+                                                        <TextArea fx:id="tab4Area" editable="false" prefHeight="344.0" prefWidth="425.0" />
+                                                    </children>
+                                                </VBox>
+                                            </items>
+                                        </SplitPane>
+                                    </content>
+                                </Tab>
+                            </tabs>
+                        </TabPane>
+                        <TextArea fx:id="outputArea" editable="false" prefHeight="161.0" prefWidth="857.0" />
+                    </items>
+                </SplitPane>
+            </children>
+        </VBox>
+    </children>
+</GridPane>

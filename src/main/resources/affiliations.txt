@@ -1,0 +1,6 @@
+hospital1.surgery;Hospital1MSP;ca.hospital1.example.com;http://localhost:7054;admin;adminpw
+hospital1.lab;Hospital1MSP;ca.hospital1.example.com;http://localhost:7054;admin;adminpw
+pharmacy1.sales;Pharmacy1MSP;ca.pharmacy1.example.com;http://localhost:8054;admin;adminpw
+pharmacy1.purchase;Pharmacy1MSP;ca.pharmacy1.example.com;http://localhost:8054;admin;adminpw
+practitioner1.practitioner;Practitioner1MSP;ca.practitioner1.example.com;http://localhost:9054;admin;adminpw
+practitioner1.office;Practitioner1MSP;ca.practitioner1.example.com;http://localhost:9054;admin;adminpw
