@@ -3,9 +3,9 @@
 
 Related project: <https://github.com/kehm/ehrblockchain>
 
-This software package is related to the following article and thesis (links will be added soon):
-- (1) Yang et al., "A blockchain-based architecture for securing electronic health record systems", 2019, Journal article (in review)
-- (2) K. E. Marstein, "Improve auditing and privacy of electronic health records by using blockchain technology", 2019, Master's thesis
+This software package is related to the following article and thesis:
+- (1) Yang et al., "A blockchain-based architecture for securing electronic health record systems", 2019, Concurrencry and Computation: Practice and Experience, <https://onlinelibrary.wiley.com/doi/10.1002/cpe.5479>
+- (2) K. E. Marstein, "Improve auditing and privacy of electronic health records by using blockchain technology", 2019, Master's thesis, <http://bora.uib.no/handle/1956/20519>
 
 Main method is located in /src/main/java/com/example/hlfnetworkapplication/Main.java.
 
